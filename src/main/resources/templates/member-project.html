@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Member</title>
+</head>
+<body>
+<div align="center">
+    <p th:if="${success}" th:text="${success}" style="color:green"></p>
+    <p th:if="${fail}" th:text="${fail}" style="color:red"></p>
+<div th:replace="~{header :: header}"></div>
+    <h3>Project Member Form</h3>
+    <p th:object="${project}">PROJECT NAME:<strong th:text="${project.name}"></strong></p>
+    <form method="post" th:object="${projectMember}"
+          th:action="@{/api/v1/projects/{projectId}/add-member(projectId=${project.id})}" >
+        <select th:field="*{memberId}" required >
+            <option value="">Select Member</option>
+            <option th:each="member : ${members}" th:text="${member.username}" th:value="${member.id}"></option>
+        </select><br/><br/>
+        <button>Add New Member</button>
+    </form>
+    <h3>Current Project Members</h3>
+    <table border="1">
+        <thead>
+        <th>#</th>
+        <th>Member</th>
+        <th>Join Date</th>
+        <th>Actions</th>
+        </thead>
+        <tbody>
+        <tr th:each="member,stat : ${addedMembers}">
+            <td th:text="${stat.count}"></td>
+            <td th:text="${member.memberName}"></td>
+            <td th:text="${member.joinedAt}"></td>
+            <td>
+                <a th:href="@{/api/v1/project-member/{memberId}/{projectId}/delete
+                (memberId=${member.memberId},projectId=${member.projectId})}"><button>Remove</button></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
