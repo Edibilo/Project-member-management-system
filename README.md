@@ -8,7 +8,6 @@ The system allows authenticated users to create and manage projects, add registe
 <img width="1427" height="722" alt="Screenshot 2026-09-18 075255" src="https://github.com/user-attachments/assets/0c205591-12ef-47ec-93fa-fa5d254872aa" />
 <img width="1528" height="992" alt="Screenshot 2026-09-18 075213" src="https://github.com/user-attachments/assets/99d65119-2d04-4da9-97b4-71f706e1d963" /><img width="1603" height="815" alt="Screenshot 2026-09-18 081817" src="https://github.com/user-attachments/assets/b0c50c17-b7cc-4864-a62a-11f7d156d195" />
 <img width="1628" height="733" alt="Screenshot 2026-09-18 081657" src="https://github.com/user-attachments/assets/b5e2fd3f-e7d7-4fb6-9ae9-8aa66de3d440" />
-<img width="451" height="296" alt="Screenshot 2026-09-18 075024" src="https://github.com/user-attachments/assets/8478fc98-2f6c-424c-b63f-4bfc5c0250d9" />
 
 
 
